@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Photobooth</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+  <h1>photobooth ♡</h1>
+  <div class="wrap">
+    <section class="strip">
+      <div class="stripbox">
+        <canvas id="cv"></canvas>
+        <img id="out" alt="Hasil photobooth" hidden>
+        <div class="cam" id="cam" hidden>
+          <video id="vid" autoplay playsinline muted></video>
+          <div id="count"></div><div id="flash"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div id="opts" hidden>
+      <div class="grp"><div class="lbl">Frame color</div><div class="pills" id="frames"></div></div>
+      <div class="grp"><div class="lbl">Filter</div><div class="pills" id="filters"></div></div>
+      <div class="grp"><div class="lbl">Stickers</div><div class="pills" id="stickers"></div></div>
+      </div>
+      <div class="actions">
+        <button class="pill go" id="go" disabled>Mulai foto!</button>
+        <a class="pill go" id="dl" download="photobooth.png" hidden>Unduh</a>
+        <button class="pill" id="again" hidden>Foto ulang</button>
+        <label class="pill" id="upl">Upload foto<input id="up" type="file" accept="image/*" multiple hidden></label>
+      </div>
+      <p class="hint" id="msg">Menyalakan kamera…</p>
+    </section>
+  </div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/composer.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
